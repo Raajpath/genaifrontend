@@ -1,0 +1,13 @@
+runtime: nodejs20
+instance_class: F1
+env: standard
+
+handlers:
+  - url: /
+    static_files: dist/genaipocfrontend/browser/index.html
+    upload: dist/genaipocfrontend/browser/index.html
+
+  - url: /(.*)
+    static_files: dist/genaipocfrontend/browser/\1
+    upload: dist/genaipocfrontend/browser/(.*)
+

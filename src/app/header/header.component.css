@@ -1,0 +1,22 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593); 
+    color:whitesmoke;
+    padding: 10px;
+    height: 60px;
+    margin: auto;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 1px;
+}
+header button{
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+}
+.brand-name{
+    font-weight: bold;
+    font-size: 20px;
+}

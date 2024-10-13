@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+            <div class="col-3 left-panel">
+                
+                    <div class="card-header gradient-custom-2"><b>Select Document</b></div>
+                    <div class="form-outline-out div">
+                        <input type="file" (change)="onFileSelected($event)" accept="application/pdf" class="form-control" placeholder="Select Document" #documentName>
+                        <span style="color: red;" *ngIf="!fileGiven">only 5-7 pages *.pdf allowed</span><br>
+                    </div>
+                    <br>        
+                    <button id="select-button" type="button" class="btn btn-outline-danger bt" (click)="onUpload()" [disabled]="!selectedFile">
+                        Send
+                    </button>
+                    <br><br>
+                
+            </div>
+            <br><br>
+    
+
+    <div class="col-9">    
+        <div *ngIf=isLoading>
+            <app-spinner></app-spinner>
+        </div>
+    <div  *ngIf="errorMessage" class="alert alert-danger" role="alert" style="text-align: center; margin-top: 10px;"><p>{{errorMessage}}</p> </div>
+
+    <div *ngIf="summary" class="response-container" style="margin-left: 100px; margin-top: 25px;">
+        <br>
+        <br>
+        <h2>!! Here is the Summary of Your Document !!</h2>
+        <br>
+        <div *ngFor="let response of respons" class="course-card">
+            <p><b>{{response}}</b></p>
+        </div>
+        
+    </div>
+
+    
+    </div>
+    </div>
+</div>
+
+
